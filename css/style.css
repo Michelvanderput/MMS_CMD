@@ -226,32 +226,32 @@ Blauw: #4377D9 */
 
 @font-face {
   font-family: 'Agharti Demi Wide';
-  src: url(../assets/font/Agharti/Agharti-DemiWide.ttf);
+  src: url(../font/Agharti/Agharti-DemiWide.ttf);
 }
 
 @font-face {
   font-family: 'Agharti Black Condensed';
-  src: url(../assets/font/Agharti/Agharti-BlackCondensed.ttf);
+  src: url(../font/Agharti/Agharti-BlackCondensed.ttf);
 }
 
 @font-face {
   font-family: 'Neue Regular';
-  src: url(../assets/font/Neue_Montreal/NeueMontreal-Regular.otf);
+  src: url(../font/Neue_Montreal/NeueMontreal-Regular.otf);
 }
 
 @font-face {
   font-family: 'Neue Bold';
-  src: url(../assets/font/Neue_Montreal/NeueMontreal-Bold.otf);
+  src: url(../font/Neue_Montreal/NeueMontreal-Bold.otf);
 }
 
 @font-face {
   font-family: 'Neue Italic';
-  src: url(../assets/font/Neue_Montreal/NeueMontreal-Italic.otf);
+  src: url(../font/Neue_Montreal/NeueMontreal-Italic.otf);
 }
 
 @font-face {
   font-family: 'Drowning';
-  src: url(../assets/font/Drowning.ttf);
+  src: url(../font/Drowning.ttf);
 }
 
 body {
