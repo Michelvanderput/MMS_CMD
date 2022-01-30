@@ -469,6 +469,13 @@ h4 {
   position: relative;
 }
 
+.textcontainer_1_1 .hover_pop-up{
+
+  left: 529px;
+  top: 144px;
+
+}
+
 .hover_text {
   background-color: #4377D9;
   color: #f4e8d7;
@@ -530,6 +537,10 @@ h4 {
 
 .tablet_screen {
   display: none;
+}
+
+.textcontainer_sheep img{
+  width: 380px;
 }
 
 .background_text {
