@@ -1,17 +1,82 @@
 var pause_check1  = false;
 var pause_check2 = false;
+var audio = new Audio("assets/leomeyer.m4a");
+var audio2 = new Audio("assets/sorenhermansen.m4a");
+
+function isPlaying(audio) { return !audio.paused; }
+
+
+var isPlaying = false;
+
+function playAudio() { 
+    audio.play(); 
+    isPlaying = true;
+} 
+
+function pauseAudio() { 
+    audio.pause();
+    isPlaying = false;
+} 
+
+function HandleAudio(){
+  if(isPlaying == true){
+    //Playing already Pause it
+    pauseAudio();
+  }else{
+    //Play the music
+    playAudio();
+  }
+}
+
+var isPlaying2 = false;
+
+function playAudio2() { 
+    audio2.play(); 
+    isPlaying2 = true;
+} 
+
+function pauseAudio2() { 
+    audio2.pause();
+    isPlaying2 = false;
+} 
+
+function HandleAudio2(){
+  if(isPlaying2 == true){
+    //Playing already Pause it
+    pauseAudio2();
+  }else{
+    //Play the music
+    playAudio2();
+  }
+}
 
 
 $('#audio_meyer').click(function() {
-  var audio = new Audio("assets/leomeyer.m4a");
-  audio.play();
+  
+  if(isPlaying == true){
+    //Playing already Pause it
+    pauseAudio();
+  }else{
+    //Play the music
+    playAudio();
+  }
+
 }); 
 
 
-  $('#audio_hermansen').click(function() {
-    var audio = new Audio("assets/sorenhermansen.m4a");
-    audio.play();
-  }); 
+
+
+$('#audio_hermansen').click(function() {
+  
+  if(isPlaying2 == true){
+    //Playing already Pause it
+    pauseAudio2();
+  }else{
+    //Play the music
+    playAudio2();
+  }
+  
+}); 
 
 
   $( ".hover_text" ).mouseenter(function() {
@@ -238,3 +303,45 @@ $("#menubutton4").click(function() {
 
 
 });
+
+
+
+
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 31, 2029 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var years = Math.floor(distance / (1000 * 60 * 60 * 24) / 365);
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("years").innerHTML = years;
+
+  document.getElementById("days").innerHTML = days;
+
+  document.getElementById("hours").innerHTML = hours;
+
+  document.getElementById("minutes").innerHTML = minutes;
+
+  document.getElementById("seconds").innerHTML = seconds;
+
+
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
