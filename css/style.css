@@ -856,7 +856,7 @@ main {
 .textcontainer_ripped{
   width: 1161px;
   height: 1160px;
-  background-image: url("/assets/rippedpaper-scp.png");
+  background-image: url("./assets/rippedpaper-scp.png");
   background-repeat: no-repeat;
 }
 
